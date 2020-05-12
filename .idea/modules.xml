@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/common.iml" filepath="$PROJECT_DIR$/gmall-parent/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/common-util/common-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/common-util/common-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall.iml" filepath="$PROJECT_DIR$/gmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/gmall-parent.iml" filepath="$PROJECT_DIR$/gmall-parent/gmall-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/model/model.iml" filepath="$PROJECT_DIR$/gmall-parent/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" />
     </modules>
   </component>
 </project>
