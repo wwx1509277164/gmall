@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServerGatewayApplication {
 
     public static void main(String[] args) {
+       //fdasfasdf
         SpringApplication.run(ServerGatewayApplication.class, args);
     }
 }

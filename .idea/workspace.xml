@@ -2,119 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3efd90-fece-41df-acd8-39d92e1edf40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_3_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_9_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_oschina_zcx7878_fastdfs_client_java_1_27_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_core_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_multipart_parser_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_stream_storage_1_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/exception/GmallException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/result/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/result/ResultCodeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/AuthContextHolder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/CookieUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/HttpClient$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/HttpClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/HttpClientUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/IdWorker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/MD5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/common-util/target/classes/com/atguigu/gmall/common/util/StreamUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/cache/GmallCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/cache/GmallCacheAspect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/config/MybatisPlusConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/config/RedisConfig$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/config/RedisConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/config/RedissonConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/config/Swagger2Config.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/constant/RedisConst.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/handler/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/activity/OrderRecode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/activity/SeckillGoods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/activity/UserRecode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/base/BaseEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/cart/CartInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/enums/OrderStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/enums/PaymentStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/enums/PaymentType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/enums/PaymentWay.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/enums/ProcessStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/Goods.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/SearchAttr.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/SearchParam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/SearchResponseAttrVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/SearchResponseTmVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/list/SearchResponseVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/order/OrderDetail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/order/OrderInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/payment/PaymentInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseAttrInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseAttrValue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseCategory1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseCategory2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseCategory3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseCategoryView.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseSaleAttr.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/BaseTrademark.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SkuAttrValue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SkuImage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SkuInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SkuSaleAttrValue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SpuImage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SpuInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SpuPoster.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SpuSaleAttr.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/product/SpuSaleAttrValue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/user/UserAddress.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/model/target/classes/com/atguigu/gmall/model/user/UserInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/com/atguigu/gmall/gateway/ServerGatewayApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/com/atguigu/gmall/gateway/config/CorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/ServiceProductApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/controller/ManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseAttrInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory2Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory3Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/ManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/com/atguigu/gmall/product/mapper/BaseAttrInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/ServiceProductApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/controller/ManagerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseAttrInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseAttrInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory2Mapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory3Mapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/ManagerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -455,7 +344,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589270902608</updated>
       <workItem from="1589270905568" duration="13912000" />
-      <workItem from="1589327376223" duration="4072000" />
+      <workItem from="1589327376223" duration="4563000" />
     </task>
     <task id="LOCAL-00001" summary="项目之初创建的忽略文件">
       <created>1589271307489</created>
@@ -492,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589276857060</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="day01">
+      <created>1589332432401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589332432401</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,6 +412,7 @@
     <MESSAGE value="项目名称改变" />
     <MESSAGE value="项目名称改变凄凄切切" />
     <MESSAGE value="创建三代工程" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建三代工程" />
+    <MESSAGE value="day01" />
+    <option name="LAST_COMMIT_MESSAGE" value="day01" />
   </component>
 </project>
