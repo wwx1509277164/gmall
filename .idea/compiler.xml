@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="model" />
-        <module name="service" />
+        <module name="service-product" />
+        <module name="server-gateway" />
         <module name="common-util" />
         <module name="service-util" />
       </profile>
@@ -17,7 +19,9 @@
       <module name="common-util" target="1.8" />
       <module name="gmall-parent" target="1.8" />
       <module name="model" target="1.8" />
+      <module name="server-gateway" target="1.8" />
       <module name="service" target="1.8" />
+      <module name="service-product" target="1.8" />
       <module name="service-util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -25,7 +29,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-util" options="-parameters" />
       <module name="model" options="-parameters" />
+      <module name="server-gateway" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service-product" options="-parameters" />
       <module name="service-util" options="-parameters" />
     </option>
   </component>

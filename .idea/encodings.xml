@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/gmall-parent/common/common-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-parent/common/service-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-parent/model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-parent/server-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-parent/service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-parent/service/service-product" charset="UTF-8" />
   </component>
 </project>
