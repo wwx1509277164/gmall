@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3efd90-fece-41df-acd8-39d92e1edf40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -343,7 +344,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589270902608</updated>
       <workItem from="1589270905568" duration="13912000" />
-      <workItem from="1589327376223" duration="5129000" />
+      <workItem from="1589327376223" duration="7517000" />
     </task>
     <task id="LOCAL-00001" summary="项目之初创建的忽略文件">
       <created>1589271307489</created>
@@ -394,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589332928771</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="day01">
+      <created>1589333464285</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589333464285</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
