@@ -1,11 +1,9 @@
 package com.atguigu.gmall.product.controller;
 
 import com.atguigu.gmall.common.result.Result;
-import com.atguigu.gmall.model.product.BaseAttrInfo;
-import com.atguigu.gmall.model.product.BaseCategory1;
-import com.atguigu.gmall.model.product.BaseCategory2;
-import com.atguigu.gmall.model.product.BaseCategory3;
+import com.atguigu.gmall.model.product.*;
 import com.atguigu.gmall.product.service.ManagerService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,4 +49,88 @@ public class ManagerController {
         List<BaseAttrInfo> baseAttrInfoList = managerService.attrInfoList(category1Id,category2Id,category3Id);
         return Result.ok(baseAttrInfoList);
     }
+
+    //添加平台属性
+    @PostMapping("/saveAttrInfo")
+    public Result saveAttrInfo(@RequestBody BaseAttrInfo baseAttrInfo){
+        managerService.saveAttrInfo(baseAttrInfo);
+        return Result.ok();
+    }
+
+    //根据平台id属性id获取平台属性
+    @PostMapping("/getAttrValueList/{attrId}")
+    public Result getAttrValueList(@PathVariable("attrId") Long attrId){
+        BaseAttrInfo baseAttrInfo = managerService.getAttrValueList(attrId);
+        return Result.ok(baseAttrInfo);
+    }
+
+
+    //获取spu分页列表
+    @GetMapping("/{page}/{limit}")
+    public Result getSpuByPage(@PathVariable("page") Integer page,
+                               @PathVariable("limit") Integer limit,
+                               Long category3Id){
+        IPage<SpuInfo> p = managerService.getSpuByPage(page,limit,category3Id);
+        return Result.ok(p);
+    }
+
+
+    //获取销售属性
+    @GetMapping("/baseSaleAttrList")
+    public Result baseSaleAttrList(){
+        List<BaseSaleAttr> baseSaleAttrList = managerService.baseSaleAttrList();
+        return Result.ok(baseSaleAttrList);
+    }
+
+    //获取品牌属性
+    @GetMapping("/baseTrademark/getTrademarkList")
+    public Result getTrademarkList(){
+        List<BaseTrademark> baseTrademarkList = managerService.getTrademarkList();
+        return Result.ok(baseTrademarkList);
+    }
+
+    //添加spu
+    @PostMapping("/saveSpuInfo")
+    public Result saveSpuInfo(@RequestBody SpuInfo spuInfo){
+        managerService.saveSpuInfo(spuInfo);
+        return Result.ok();
+    }
+
+    //根据spuId获取图片列表
+    @GetMapping("/spuImageList/{spuId}")
+    public Result spuImageList(@PathVariable("spuId") Long spuId){
+        List<SpuImage> spuImageList = managerService.spuImageList(spuId);
+        return Result.ok(spuImageList);
+    }
+
+    //根据spuId获取销售属性
+    @GetMapping("/spuSaleAttrList/{spuId}")
+    public Result spuSaleAttrList(@PathVariable("spuId") Long spuId){
+        List<SpuSaleAttr> spuSaleAttrList = managerService.spuSaleAttrList(spuId);
+        return Result.ok(spuSaleAttrList);
+    }
+
+    //修改品牌
+    @PutMapping("baseTrademark/update")
+    public Result UpdateTrademark(BaseTrademark baseTrademark){
+        managerService.updateTradeMark(baseTrademark);
+        return Result.ok();
+    }
+
+    //保存品牌
+    @PostMapping("baseTrademark/save")
+    public Result SaveTrademark(BaseTrademark baseTrademark){
+        managerService.saveTradeMark(baseTrademark);
+        return Result.ok();
+    }
+
+    //回显品牌
+    @GetMapping("baseTrademark/get/{id}")
+    public Result getTradeMarkById(@PathVariable("id") Long id){
+        BaseTrademark baseTrademark = managerService.getTradeMarkById(id);
+        return Result.ok(baseTrademark);
+    }
+
+
+
 }
