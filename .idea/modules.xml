@@ -9,7 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/model/model.iml" filepath="$PROJECT_DIR$/gmall-parent/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" filepath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" />
     </modules>
   </component>

@@ -4,6 +4,7 @@ import com.atguigu.gmall.common.result.Result;
 import com.atguigu.gmall.model.product.*;
 import com.atguigu.gmall.product.service.ManagerService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -132,5 +133,32 @@ public class ManagerController {
     }
 
 
+    //保存sku
+    @PostMapping("/saveSkuInfo")
+    public Result saveSkuInfo(@RequestBody SkuInfo skuInfo){
+        managerService.saveSkuInfo(skuInfo);
+        return Result.ok();
+    }
+
+    //获取sku分页列表
+    @GetMapping("/list/{page}/{limit}")
+    public Result getSkuPage(@PathVariable("page") Integer page,
+                             @PathVariable("limit") Integer limit){
+        IPage<SkuInfo> p =  managerService.getSkuPage(page,limit);
+        return Result.ok(p);
+    }
+
+    //商品的下架
+    @GetMapping("cancelSale/{skuId}")
+    public Result cancelSale(@PathVariable("skuId") Long skuId){
+        managerService.cancelSale(skuId);
+        return Result.ok();
+    }
+    //商品的上架
+    @GetMapping("onSale/{skuId}")
+    public Result onSale(@PathVariable("skuId") Long skuId){
+        managerService.onSale(skuId);
+        return Result.ok();
+    }
 
 }

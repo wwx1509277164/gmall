@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="model" />
-        <module name="service-product" />
-        <module name="server-gateway" />
         <module name="common-util" />
+        <module name="server-gateway" />
+        <module name="model" />
         <module name="service-util" />
+        <module name="service-product" />
+        <module name="service-item" />
+        <module name="service-product-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,7 +23,10 @@
       <module name="model" target="1.8" />
       <module name="server-gateway" target="1.8" />
       <module name="service" target="1.8" />
+      <module name="service-client" target="1.8" />
+      <module name="service-item" target="1.8" />
       <module name="service-product" target="1.8" />
+      <module name="service-product-client" target="1.8" />
       <module name="service-util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -31,7 +36,10 @@
       <module name="model" options="-parameters" />
       <module name="server-gateway" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service-client" options="-parameters" />
+      <module name="service-item" options="-parameters" />
       <module name="service-product" options="-parameters" />
+      <module name="service-product-client" options="-parameters" />
       <module name="service-util" options="-parameters" />
     </option>
   </component>

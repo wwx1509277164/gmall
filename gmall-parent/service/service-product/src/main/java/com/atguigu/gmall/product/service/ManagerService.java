@@ -2,8 +2,11 @@ package com.atguigu.gmall.product.service;
 
 import com.atguigu.gmall.model.product.*;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Administrator
@@ -39,4 +42,22 @@ public interface ManagerService {
     void saveTradeMark(BaseTrademark baseTrademark);
 
     BaseTrademark getTradeMarkById(Long id);
+
+    void saveSkuInfo(SkuInfo skuInfo);
+
+    IPage<SkuInfo> getSkuPage(Integer page, Integer limit);
+
+    void cancelSale(Long skuId);
+
+    void onSale(Long skuId);
+
+    SkuInfo getSkuInfo(Long skuId);
+
+    BaseCategoryView getCategoryView(Long category3Id);
+
+    BigDecimal getSkuPrice(Long skuId);
+
+    List<SpuSaleAttr> getSpuSaleAttrListCheckBySku(Long skuId, Long spuId);
+
+    Map getSkuValueIdsMap(Long spuId);
 }
