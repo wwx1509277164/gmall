@@ -32,7 +32,7 @@ public class ItemServiceImpl implements ItemService {
         BigDecimal skuPrice = productFeignClient.getSkuPrice(skuId);
         result.put("price",skuPrice);
         Map skuValueIdsMap = productFeignClient.getSkuValueIdsMap(skuInfo.getSpuId());
-        result.put("valuesSkuJson", JSON.toJSON(skuValueIdsMap));
+        result.put("valuesSkuJson", JSON.toJSONString(skuValueIdsMap));
         List<SpuSaleAttr> spuSaleAttrListCheckBySku = productFeignClient.getSpuSaleAttrListCheckBySku(skuId, skuInfo.getSpuId());
         result.put("spuSaleAttrList",spuSaleAttrListCheckBySku);
         return result;

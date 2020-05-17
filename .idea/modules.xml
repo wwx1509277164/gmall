@@ -11,9 +11,12 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/web/web.iml" filepath="$PROJECT_DIR$/gmall-parent/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" filepath="$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" />
     </modules>
   </component>
 </project>

@@ -7,7 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="web-all" />
         <module name="common-util" />
+        <module name="service-item-client" />
         <module name="server-gateway" />
         <module name="model" />
         <module name="service-util" />
@@ -25,9 +27,12 @@
       <module name="service" target="1.8" />
       <module name="service-client" target="1.8" />
       <module name="service-item" target="1.8" />
+      <module name="service-item-client" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-product-client" target="1.8" />
       <module name="service-util" target="1.8" />
+      <module name="web" target="1.8" />
+      <module name="web-all" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -38,9 +43,12 @@
       <module name="service" options="-parameters" />
       <module name="service-client" options="-parameters" />
       <module name="service-item" options="-parameters" />
+      <module name="service-item-client" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />
       <module name="service-util" options="-parameters" />
+      <module name="web" options="-parameters" />
+      <module name="web-all" options="-parameters" />
     </option>
   </component>
 </project>

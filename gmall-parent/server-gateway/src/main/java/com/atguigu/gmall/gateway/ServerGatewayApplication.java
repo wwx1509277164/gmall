@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Administrator
  * @create 2020-05-13 8:12
  */
+
 @SpringBootApplication
 public class ServerGatewayApplication {
 

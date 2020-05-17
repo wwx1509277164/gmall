@@ -1,18 +1,24 @@
 package com.atguigu.gmall.product.service.impl;
 
+import com.alibaba.csp.sentinel.util.StringUtil;
+import com.alibaba.nacos.common.util.UuidUtils;
+import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.model.product.*;
 import com.atguigu.gmall.product.mapper.*;
 import com.atguigu.gmall.product.service.ManagerService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Administrator
@@ -211,10 +217,94 @@ public class ManagerServiceImpl implements ManagerService {
         skuInfo.setIsSale(1);
         skuInfoMapper.updateById(skuInfo);
     }
+    @Autowired
+    RedisTemplate redisTemplate;
+    @Autowired
+    RedissonClient redissonClient;
+    public SkuInfo getSkuInfoByRedisson(Long skuId) {
+        String skuKey = RedisConst.SKUKEY_PREFIX+skuId+RedisConst.SKUKEY_SUFFIX;
+        String skuLock = RedisConst.SKUKEY_PREFIX+skuId+RedisConst.SKULOCK_SUFFIX;
+        SkuInfo skuInfo = (SkuInfo) redisTemplate.opsForValue().get(skuKey);
+        if (skuInfo!=null){
+            return skuInfo;
+        }else {
+            RLock lock = redissonClient.getLock(skuLock);
+            try {
+                boolean res = lock.tryLock(1, 3, TimeUnit.SECONDS);
+                if (res){
+                    skuInfo = skuInfoMapper.selectById(skuId);
+                    //6:缓存穿透
+                    if (null == skuInfo) {
+                        skuInfo = new SkuInfo();
+                        redisTemplate.opsForValue().set(skuKey, skuInfo, 5, TimeUnit.MINUTES);
+                    } else {
+                        //查询图片
+                        List<SkuImage> skuImageList = skuImageMapper.selectList(new QueryWrapper<SkuImage>().eq("sku_id", skuId));
+                        skuInfo.setSkuImageList(skuImageList);
+                        //随机数 解决缓存雪崩问题
+                        //缓存一天
+                        redisTemplate.opsForValue().set(skuKey, skuInfo,
+                                RedisConst.SKUKEY_TIMEOUT, TimeUnit.SECONDS);
+                    }
+                }else {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    return getSkuInfo(skuId);
+                }
 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }finally {
+                lock.unlock();
+            }
+        }
+        return skuInfo;
+    }
     @Override
     public SkuInfo getSkuInfo(Long skuId) {
-        return skuInfoMapper.selectById(skuId);
+        String skuKey = RedisConst.SKUKEY_PREFIX+skuId+RedisConst.SKUKEY_SUFFIX;
+        String skuLock = RedisConst.SKUKEY_PREFIX+skuId+RedisConst.SKULOCK_SUFFIX;
+        SkuInfo result = (SkuInfo) redisTemplate.opsForValue().get(skuKey);
+        if (result!=null){
+            return result;
+        }else {
+            String uuid = UUID.randomUUID().toString();
+            Boolean isLock = redisTemplate.opsForValue().setIfAbsent(skuLock, uuid,1,TimeUnit.MINUTES);
+            if (isLock){
+                SkuInfo skuInfo = skuInfoMapper.selectById(skuId);
+                String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return tostring(redis.call('del',KEYS[1])) else return 0 end";
+                if (skuInfo==null){
+                    redisTemplate.opsForValue().set(skuKey,skuInfo,5000, TimeUnit.SECONDS);
+                    this.redisTemplate.execute(new DefaultRedisScript<>(script), Collections.singletonList(skuLock), uuid);
+                    return skuInfo;
+                }else {
+                    List<SkuImage> imageList = skuImageMapper.selectList(new QueryWrapper<SkuImage>().eq("sku_id", skuId));
+                    skuInfo.setSkuImageList(imageList);
+                    Random random = new Random();
+                    int i = random.nextInt(5000);
+                    redisTemplate.opsForValue().set(skuKey, skuInfo,i+RedisConst.SKUKEY_TIMEOUT,TimeUnit.SECONDS);
+                    //缺乏原子性
+                   /* String u = (String) redisTemplate.opsForValue().get(skuLock);
+                    if (!StringUtil.isEmpty(u) && u.equals(uuid)) {
+                        redisTemplate.delete(skuLock);
+                    }*/
+                   //使用lua脚本进行删除   保持了原子性
+                    this.redisTemplate.execute(new DefaultRedisScript<>(script), Collections.singletonList(skuLock), uuid);
+                    return skuInfo;
+                }
+            }else {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return getSkuInfo(skuId);
+            }
+
+        }
     }
 
     @Autowired
