@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @author Administrator
@@ -331,6 +332,51 @@ public class ManagerServiceImpl implements ManagerService {
         for (Map map : mapList) {
             result.put(map.get("value_ids"),map.get("sku_id"));
         }
+        return result;
+    }
+
+
+    //查询基本分类视图 所有集合
+    @Override
+    public List<Map> getBaseCategoryList() {
+        //创建返回的list
+        List<Map> result = new ArrayList<>();
+        //从数据库查询所有的集合，数据结构不符合前台需要的数据结构
+        List<BaseCategoryView> baseCategoryViews = baseCategoryViewMapper.selectList(null);
+        //设置数据的index
+        int index = 1;
+        //将所有的数据先按照一级分类进行分组
+        Map<Long, List<BaseCategoryView>> category1IdMap = baseCategoryViews.stream().collect(Collectors.groupingBy(BaseCategoryView::getCategory1Id));
+        for (Map.Entry<Long, List<BaseCategoryView>> category1Entry : category1IdMap.entrySet()) {
+            Map map1 = new HashMap<>();
+            //插入一级分类的index
+            map1.put("index",index++);
+            //插入一级分类的名字
+            map1.put("categoryName",category1Entry.getValue().get(0).getCategory1Name());
+            //插入一级分类的id
+            map1.put("categoryId",category1Entry.getValue().get(0).getCategory1Id());
+            //插入二级分类
+            Map<Long, List<BaseCategoryView>> category2IdMap = category1Entry.getValue().stream().collect(Collectors.groupingBy(BaseCategoryView::getCategory2Id));
+            List<Map> category2IdResult = new ArrayList<>();
+            for (Map.Entry<Long, List<BaseCategoryView>> category2Entry : category2IdMap.entrySet()) {
+                Map map2 = new HashMap<>();
+                map2.put("categoryId",category2Entry.getValue().get(0).getCategory2Id());
+                map2.put("categoryName",category2Entry.getValue().get(0).getCategory2Name());
+                List<BaseCategoryView> category3List = category2Entry.getValue();
+                List<Map> category3IdMap = new ArrayList<>();
+                for (BaseCategoryView baseCategoryView : category3List) {
+                    HashMap<Object, Object> map3 = new HashMap<>();
+                    map3.put("categoryId",baseCategoryView.getCategory3Id());
+                    map3.put("categoryName",baseCategoryView.getCategory3Name());
+                    category3IdMap.add(map3);
+                }
+                map2.put("categoryChild",category3IdMap);
+                category2IdResult.add(map2);
+            }
+            map1.put("categoryChild",category2IdResult);
+            result.add(map1);
+        }
+        System.out.println(result);
         return result;
     }
 }

@@ -15,6 +15,7 @@
         <module name="service-util" />
         <module name="service-product" />
         <module name="service-item" />
+        <module name="service-list" />
         <module name="service-product-client" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="service-client" target="1.8" />
       <module name="service-item" target="1.8" />
       <module name="service-item-client" target="1.8" />
+      <module name="service-list" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-product-client" target="1.8" />
       <module name="service-util" target="1.8" />
@@ -44,6 +46,7 @@
       <module name="service-client" options="-parameters" />
       <module name="service-item" options="-parameters" />
       <module name="service-item-client" options="-parameters" />
+      <module name="service-list" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />
       <module name="service-util" options="-parameters" />

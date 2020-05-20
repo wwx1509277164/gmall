@@ -54,6 +54,10 @@ public class ProductApiController {
     }
 
 
+    @GetMapping("/getBaseCategoryList")
+    public List<Map> getBaseCategoryList(){
+        return managerService.getBaseCategoryList();
+    }
 
 
 
