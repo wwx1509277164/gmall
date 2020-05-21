@@ -1,9 +1,6 @@
 package com.atguigu.gmall.product.api;
 
-import com.atguigu.gmall.model.product.BaseCategoryView;
-import com.atguigu.gmall.model.product.BaseSaleAttr;
-import com.atguigu.gmall.model.product.SkuInfo;
-import com.atguigu.gmall.model.product.SpuSaleAttr;
+import com.atguigu.gmall.model.product.*;
 import com.atguigu.gmall.product.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -58,15 +55,13 @@ public class ProductApiController {
     public List<Map> getBaseCategoryList(){
         return managerService.getBaseCategoryList();
     }
+    @GetMapping("/getBaseTrademark/{id}")
+    public BaseTrademark getBaseTrademark(@PathVariable("id") Long id){
+        return managerService.getTradeMarkById(id);
+    }
 
-
-
-
-
-
-
-
-
-
-
+    @GetMapping("/getAttrList/{skuId}")
+    public List<SkuAttrValue> getAttrList(@PathVariable("skuId") Long skuId){
+        return managerService.getAttrList(skuId);
+    }
 }

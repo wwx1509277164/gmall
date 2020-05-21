@@ -3,6 +3,7 @@ package com.atguigu.gmall.item.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.atguigu.gmall.item.config.ThreadPoolConfig;
 import com.atguigu.gmall.item.service.ItemService;
+import com.atguigu.gmall.list.client.ListFeignClient;
 import com.atguigu.gmall.model.product.BaseCategoryView;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
@@ -26,6 +27,8 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     ProductFeignClient productFeignClient;
     @Autowired
+    ListFeignClient listFeignClient;
+    @Autowired
     ThreadPoolExecutor threadPoolExecutor;
     @Override
     public Map<String, Object> getItem(Long skuId) {
@@ -39,12 +42,13 @@ public class ItemServiceImpl implements ItemService {
             BigDecimal skuPrice = productFeignClient.getSkuPrice(skuId);
             result.put("price", skuPrice);
         }, threadPoolExecutor);
-
+        CompletableFuture.runAsync(()->{
+            listFeignClient.incrHotScore(skuId);
+        },threadPoolExecutor);
         CompletableFuture<Void> categoryView1 = skuInfoCompletableFuture.thenAcceptAsync((skuInfo) -> {
             BaseCategoryView categoryView = productFeignClient.getCategoryView(skuInfo.getCategory3Id());
             result.put("categoryView", categoryView);
         });
-
         CompletableFuture<Void> valuesSkuJson = skuInfoCompletableFuture.thenAcceptAsync((skuInfo) -> {
             Map skuValueIdsMap = productFeignClient.getSkuValueIdsMap(skuInfo.getSpuId());
             result.put("valuesSkuJson", JSON.toJSONString(skuValueIdsMap));

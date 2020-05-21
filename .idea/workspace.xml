@@ -2,49 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3efd90-fece-41df-acd8-39d92e1edf40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_redis_1_4_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-item/target/classes/com/atguigu/gmall/item/config/ThreadPoolConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/service-list.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/java/com/atguigu/gmall/list/ServiceListApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/java/com/atguigu/gmall/list/controller/ListApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/com/atguigu/gmall/list/ServiceListApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/com/atguigu/gmall/list/controller/ListApiController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/src/main/java/com/atguigu/gmall/all/controller/indexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/target/classes/com/atguigu/gmall/all/controller/indexController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/cache/GmallCacheAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/service-util/target/classes/com/atguigu/gmall/common/cache/GmallCacheAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/java/com/atguigu/gmall/gateway/ServerGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/com/atguigu/gmall/gateway/ServerGatewayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/com/atguigu/gmall/gateway/ServerGatewayApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/src/main/java/com/atguigu/gmall/product/client/ProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/src/main/java/com/atguigu/gmall/product/client/ProductFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/src/main/java/com/atguigu/gmall/product/client/impl/DegradeProductFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/src/main/java/com/atguigu/gmall/product/client/impl/DegradeProductFeignClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/target/classes/com/atguigu/gmall/product/client/ProductFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/target/classes/com/atguigu/gmall/product/client/ProductFeignClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/target/classes/com/atguigu/gmall/product/client/impl/DegradeProductFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/target/classes/com/atguigu/gmall/product/client/impl/DegradeProductFeignClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-item/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-item/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-item/src/main/java/com/atguigu/gmall/item/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-item/src/main/java/com/atguigu/gmall/item/service/impl/ItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-item/target/classes/com/atguigu/gmall/item/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-item/target/classes/com/atguigu/gmall/item/service/impl/ItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/java/com/atguigu/gmall/list/controller/ListApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/java/com/atguigu/gmall/list/controller/ListApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/com/atguigu/gmall/list/controller/ListApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/com/atguigu/gmall/list/controller/ListApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/api/ProductApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/api/ProductApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuAttrValueMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuAttrValueMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/ManagerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/api/ProductApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/api/ProductApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SkuAttrValueMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SkuAttrValueMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/ManagerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/web/web-all/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/web/web-all/target/classes/com/atguigu/gmall/all/controller/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/target/classes/com/atguigu/gmall/all/controller/indexController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -95,22 +77,26 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-parent/web/web-all/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/com/atguigu/gmall/product/mapper" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\service\service-product\src\main\resources\com\atguigu\gmall\product\mapper" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.atguigu.gmall.list.service" />
+      <recent name="com.atguigu.gmall.item.service" />
+      <recent name="com.atguigu.gmall.product.mapper" />
+      <recent name="com.atguigu.gmall.product.service.impl" />
+      <recent name="com.atguigu.gmall.product.service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.atguigu.gmall.product.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\web\web-all\src\main\resources" />
       <recent name="D:\Mywork\workspaces\gmall\gmall-parent\service\service-product\src\main\resources\com\atguigu\gmall\product\mapper" />
+      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\web\web-all\src\main\resources" />
       <recent name="D:\Mywork\workspaces\gmall\gmall-parent\model\src\main\java" />
       <recent name="D:\Mywork\workspaces\gmall\gmall-parent\common\service-util\src\main\java" />
       <recent name="D:\Mywork\workspaces\gmall\gmall-parent\common\common-util\src\main\java" />
@@ -118,11 +104,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.atguigu.gmall.product.mapper" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.atguigu.gmall.item.service" />
-      <recent name="com.atguigu.gmall.product.mapper" />
-      <recent name="com.atguigu.gmall.product.service.impl" />
-      <recent name="com.atguigu.gmall.product.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\service\service-product\src\main\resources\com\atguigu\gmall\product\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -390,8 +373,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ServiceListApplication" />
-        <item itemvalue="Spring Boot.WebAllApplication" />
         <item itemvalue="Spring Boot.ServiceProductApplication" />
+        <item itemvalue="Spring Boot.WebAllApplication" />
         <item itemvalue="Spring Boot.ServerGatewayApplication" />
       </list>
     </recent_temporary>
@@ -399,17 +382,17 @@
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.23360656" />
+        <option name="contentProportion" value="0.24248634" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c2b85b49" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e5224776" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c2b85b49" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@55f149" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e5224776" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5c00124a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -438,7 +421,8 @@
       <workItem from="1589681519725" duration="4166000" />
       <workItem from="1589713900127" duration="13528000" />
       <workItem from="1589844352076" duration="7571000" />
-      <workItem from="1589882374747" duration="13127000" />
+      <workItem from="1589882374747" duration="19786000" />
+      <workItem from="1590022412322" duration="13602000" />
     </task>
     <task id="LOCAL-00001" summary="项目之初创建的忽略文件">
       <created>1589271307489</created>
@@ -531,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589848589435</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="首页的查看和静态化技术">
+      <created>1589936043976</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589936043976</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,6 +550,7 @@
     <MESSAGE value="day02" />
     <MESSAGE value="后台页面基本完成，开始写前段代码" />
     <MESSAGE value="redis的缓存和多线程串行化" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis的缓存和多线程串行化" />
+    <MESSAGE value="首页的查看和静态化技术" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页的查看和静态化技术" />
   </component>
 </project>

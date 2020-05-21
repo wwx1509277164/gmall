@@ -62,4 +62,6 @@ public interface ManagerService {
     Map getSkuValueIdsMap(Long spuId);
 
     List<Map> getBaseCategoryList();
+
+    List<SkuAttrValue> getAttrList(Long skuId);
 }

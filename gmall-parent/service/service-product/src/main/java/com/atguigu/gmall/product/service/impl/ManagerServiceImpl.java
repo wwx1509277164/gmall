@@ -379,4 +379,9 @@ public class ManagerServiceImpl implements ManagerService {
         System.out.println(result);
         return result;
     }
+
+    @Override
+    public List<SkuAttrValue> getAttrList(Long skuId) {
+        return skuAttrValueMapper.getAttrList(skuId);
+    }
 }
