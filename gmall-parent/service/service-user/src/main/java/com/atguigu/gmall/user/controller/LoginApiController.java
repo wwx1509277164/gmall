@@ -41,7 +41,7 @@ public class LoginApiController {
             //生成令牌
             String token = UUID.randomUUID().toString().replaceAll("-", "");
             //保存令牌
-            redisTemplate.opsForValue().set(RedisConst.USER_LOGIN_KEY_PREFIX+token,user.getId(), RedisConst.USERKEY_TIMEOUT, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set(RedisConst.USER_LOGIN_KEY_PREFIX+token,user.getId().toString(), RedisConst.USERKEY_TIMEOUT, TimeUnit.SECONDS);
             Map map = new HashMap<>();
             map.put("token",token);
             map.put("nickName",user.getNickName());
