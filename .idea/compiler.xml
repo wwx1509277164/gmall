@@ -9,14 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="web-all" />
         <module name="common-util" />
-        <module name="service-item-client" />
         <module name="service-list-client" />
         <module name="server-gateway" />
         <module name="model" />
         <module name="service-util" />
+        <module name="service-user" />
         <module name="service-product" />
         <module name="service-item" />
         <module name="service-list" />
+        <module name="service-item-client" />
         <module name="service-product-client" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
       <module name="service-list-client" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-product-client" target="1.8" />
+      <module name="service-user" target="1.8" />
       <module name="service-util" target="1.8" />
       <module name="web" target="1.8" />
       <module name="web-all" target="1.8" />
@@ -52,6 +54,7 @@
       <module name="service-list-client" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />
+      <module name="service-user" options="-parameters" />
       <module name="service-util" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="web-all" options="-parameters" />

@@ -33,6 +33,11 @@
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>1.4.0.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.atguigu</groupId>
+            <artifactId>service-list-client</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 

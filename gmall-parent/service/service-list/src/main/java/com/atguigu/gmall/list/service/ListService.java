@@ -2,6 +2,7 @@ package com.atguigu.gmall.list.service;
 
 import com.atguigu.gmall.model.list.SearchParam;
 import com.atguigu.gmall.model.list.SearchResponseVo;
+import org.springframework.ui.Model;
 
 /**
  * @author Administrator
