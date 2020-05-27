@@ -118,8 +118,9 @@ public class LoginGlobalFilter implements GlobalFilter, Ordered {
             }
         }
         if (!StringUtils.isEmpty(token)){
-            if (redisTemplate.hasKey(token)) {
-                 return  (String) redisTemplate.opsForValue().get(token);
+            System.out.println(token);
+            if(redisTemplate.hasKey("user:login:" + token)) {
+                return (String) redisTemplate.opsForValue().get("user:login:" + token);
             }
         }
         return null;

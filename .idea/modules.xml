@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" filepath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-cart/service-cart.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-cart/service-cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-cart-client/service-cart-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-cart-client/service-cart-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-item/service-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" />

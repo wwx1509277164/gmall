@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web-all" />
-        <module name="common-util" />
         <module name="service-cart" />
-        <module name="service-list-client" />
-        <module name="server-gateway" />
-        <module name="model" />
+        <module name="common-util" />
         <module name="service-util" />
         <module name="service-user" />
-        <module name="service-product" />
+        <module name="service-cart-client" />
+        <module name="web-all" />
         <module name="service-item" />
-        <module name="service-list" />
+        <module name="service-product" />
+        <module name="model" />
         <module name="service-item-client" />
+        <module name="service-list-client" />
         <module name="service-product-client" />
+        <module name="service-list" />
+        <module name="server-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="server-gateway" target="1.8" />
       <module name="service" target="1.8" />
       <module name="service-cart" target="1.8" />
+      <module name="service-cart-client" target="1.8" />
       <module name="service-client" target="1.8" />
       <module name="service-item" target="1.8" />
       <module name="service-item-client" target="1.8" />
@@ -50,6 +52,7 @@
       <module name="server-gateway" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service-cart" options="-parameters" />
+      <module name="service-cart-client" options="-parameters" />
       <module name="service-client" options="-parameters" />
       <module name="service-item" options="-parameters" />
       <module name="service-item-client" options="-parameters" />
