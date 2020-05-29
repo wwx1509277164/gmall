@@ -36,6 +36,29 @@ public class CartServiceImpl implements CartService {
     private ProductFeignClient productFeignClient;
 
     @Override
+    public List<CartInfo> getCartCheckedList(String userId) {
+        //优先从缓存中进行查询
+        String cacheKey = this.cacheKey(userId);
+        List<CartInfo> cartInfoList = redisTemplate.opsForHash().values(cacheKey);
+        if (CollectionUtils.isEmpty(cartInfoList)){
+            cartInfoList = cartInfoMapper.selectList(new QueryWrapper<CartInfo>().eq("user_id", userId).eq("is_checked",1));
+        }else {
+            //选中购物车集合
+            cartInfoList = cartInfoList.stream().filter((cartInfo) -> {
+                if (cartInfo.getIsChecked().intValue() == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }).collect(Collectors.toList());
+        }
+        cartInfoList.forEach(cartInfo -> {
+            cartInfo.setSkuPrice(productFeignClient.getSkuPrice(cartInfo.getSkuId()));
+        });
+        return cartInfoList;
+    }
+
+    @Override
     public void checkCart(Long skuId, Integer isChecked, String userId) {
         CartInfo cartInfo = new CartInfo();
         cartInfo.setIsChecked(isChecked);

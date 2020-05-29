@@ -16,10 +16,14 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-item-client/service-item-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-list/service-list.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-list/service-list.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-list-client/service-list-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-list-client/service-list-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-order/service-order.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-order/service-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-order-client/service-order-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-order-client/service-order-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-product-client/service-product-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-user/service-user.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-user/service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/service-client/service-user-client/service-user-client.iml" filepath="$PROJECT_DIR$/gmall-parent/service-client/service-user-client/service-user-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/service-util/service-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/ware-manage/ware-manage.iml" filepath="$PROJECT_DIR$/gmall-parent/ware-manage/ware-manage.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/web/web.iml" filepath="$PROJECT_DIR$/gmall-parent/web/web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" filepath="$PROJECT_DIR$/gmall-parent/web/web-all/web-all.iml" />
     </modules>

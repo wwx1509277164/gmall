@@ -97,6 +97,8 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.7.0" level="project" />
     <orderEntry type="module" module-name="service-list-client" />
     <orderEntry type="module" module-name="service-cart-client" />
+    <orderEntry type="module" module-name="service-user-client" />
+    <orderEntry type="module" module-name="service-order-client" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.0" level="project" />

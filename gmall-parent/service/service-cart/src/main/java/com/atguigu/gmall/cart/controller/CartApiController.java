@@ -59,6 +59,12 @@ public class CartApiController {
         return Result.ok();
     }
 
+
+    //查询选中的购物车的集合
+    @GetMapping("getCartCheckedList/{userId}")
+    public List<CartInfo> getCartCheckedList(@PathVariable("userId") String userId){
+        return cartService.getCartCheckedList(userId);
+    }
 }
 
 
