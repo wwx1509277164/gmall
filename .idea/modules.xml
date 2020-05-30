@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/gmall.iml" filepath="$PROJECT_DIR$/gmall.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/gmall-parent.iml" filepath="$PROJECT_DIR$/gmall-parent/gmall-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/model/model.iml" filepath="$PROJECT_DIR$/gmall-parent/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent/common/rabbit-util/rabbit-util.iml" filepath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/rabbit-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" filepath="$PROJECT_DIR$/gmall-parent/server-gateway/server-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/service/service-cart/service-cart.iml" filepath="$PROJECT_DIR$/gmall-parent/service/service-cart/service-cart.iml" />

@@ -11,7 +11,7 @@
         <module name="ware-manage" />
         <module name="common-util" />
         <module name="service-order" />
-        <module name="server-gateway" />
+        <module name="service-user-client" />
         <module name="service-util" />
         <module name="service-user" />
         <module name="service-cart-client" />
@@ -25,7 +25,8 @@
         <module name="service-product-client" />
         <module name="service-mq" />
         <module name="service-list" />
-        <module name="service-user-client" />
+        <module name="server-gateway" />
+        <module name="rabbit-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +34,7 @@
       <module name="common-util" target="1.8" />
       <module name="gmall-parent" target="1.8" />
       <module name="model" target="1.8" />
+      <module name="rabbit-util" target="1.8" />
       <module name="server-gateway" target="1.8" />
       <module name="service" target="1.8" />
       <module name="service-cart" target="1.8" />
@@ -59,6 +61,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-util" options="-parameters" />
       <module name="model" options="-parameters" />
+      <module name="rabbit-util" options="-parameters" />
       <module name="server-gateway" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service-cart" options="-parameters" />

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3efd90-fece-41df-acd8-39d92e1edf40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/service-mq.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/service-mq.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +67,12 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\service\service-product\src\main\resources\com\atguigu\gmall\product\mapper" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.atguigu.gmall.order.mapper" />
+      <recent name="com.atguigu.gmall.order.service" />
+      <recent name="com.atguigu.gmall.user.mapper" />
+      <recent name="com.atguigu.gmall.cart.mapper" />
+      <recent name="com.atguigu.gmall.cart.service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.atguigu.gmall.product.mapper" />
@@ -80,12 +89,8 @@
       <recent name="com.atguigu.gmall.gateway.config" />
       <recent name="com.atguigu.gmall.product.mapper" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.atguigu.gmall.order.mapper" />
-      <recent name="com.atguigu.gmall.order.service" />
-      <recent name="com.atguigu.gmall.user.mapper" />
-      <recent name="com.atguigu.gmall.cart.mapper" />
-      <recent name="com.atguigu.gmall.cart.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Mywork\workspaces\gmall\gmall-parent\service\service-product\src\main\resources\com\atguigu\gmall\product\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,6 +147,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.list.ServiceListApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceMqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-mq" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.mq.ServiceMqApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -397,9 +409,24 @@
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.1655481" />
+        <option name="contentProportion" value="0.20954512" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15994cbb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7943c4a7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -440,7 +467,8 @@
       <workItem from="1590554687754" duration="770000" />
       <workItem from="1590557215808" duration="5622000" />
       <workItem from="1590626653191" duration="9398000" />
-      <workItem from="1590712655760" duration="3953000" />
+      <workItem from="1590712655760" duration="6589000" />
+      <workItem from="1590748580480" duration="6957000" />
     </task>
     <task id="LOCAL-00001" summary="项目之初创建的忽略文件">
       <created>1589271307489</created>
@@ -575,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590712842887</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ribbit">
+      <created>1590732164528</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1590732164528</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +644,8 @@
     <MESSAGE value="订单上" />
     <MESSAGE value="订单详情页面的查询" />
     <MESSAGE value="提交订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交订单" />
+    <MESSAGE value="ribbit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ribbit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
