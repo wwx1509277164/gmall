@@ -1,5 +1,7 @@
 package com.atguigu.gmall.mq.receiver;
 
+import com.atguigu.gmall.mq.config.DeadLetterMqConfig;
+import com.atguigu.gmall.mq.config.DelayedMqConfig;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.Exchange;
@@ -9,6 +11,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * @author Administrator
@@ -16,6 +19,30 @@ import java.io.IOException;
  */
 @Component
 public class MessageReceiver {
+
+
+    //接收延迟消息
+    @RabbitListener(queues = DeadLetterMqConfig.queue_dead_2)
+    public void deadLeaderMessage(String msg,Channel channel,Message message){
+        System.out.println("接收延迟消息："+msg+":"+new Date());
+    }
+
+
+    @RabbitListener(queues = DelayedMqConfig.queue_delay_1)
+    public void delayedMessage(String msg,Channel channel,Message message){
+        System.out.println("接收延迟消息："+msg+":"+new Date());
+    }
+
+
+
+
+
+
+
+
+
+
+
     //接收方
     @RabbitListener(bindings = {@QueueBinding(
             value = @Queue(value = "queue11",autoDelete = "false",durable = "true"),

@@ -69,4 +69,10 @@ public class OrderApiController {
         Long orderId =  orderInfoService.submitOrder(orderInfo);
         return Result.ok(orderId);
     }
+
+    @GetMapping("/getOrderInfo/{orderId}")
+    public OrderInfo getOrderInfo(@PathVariable("orderId") Long orderId){
+
+        return orderInfoService.getOrderInfo(orderId);
+    }
 }

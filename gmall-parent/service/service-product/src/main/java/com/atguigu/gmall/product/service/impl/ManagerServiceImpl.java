@@ -3,6 +3,8 @@ package com.atguigu.gmall.product.service.impl;
 import com.alibaba.csp.sentinel.util.StringUtil;
 import com.alibaba.nacos.common.util.UuidUtils;
 import com.atguigu.gmall.common.constant.RedisConst;
+import com.atguigu.gmall.common.constants.MqConst;
+import com.atguigu.gmall.common.service.RabbitService;
 import com.atguigu.gmall.model.product.*;
 import com.atguigu.gmall.product.mapper.*;
 import com.atguigu.gmall.product.service.ManagerService;
@@ -209,14 +211,21 @@ public class ManagerServiceImpl implements ManagerService {
         skuInfo.setId(skuId);
         skuInfo.setIsSale(0);
         skuInfoMapper.updateById(skuInfo);
+        rabbitService.sendMessage(MqConst.EXCHANGE_DIRECT_GOODS,
+                MqConst.ROUTING_GOODS_LOWER,skuId);
     }
-
+    @Autowired
+    private RabbitService rabbitService;
     @Override
     public void onSale(Long skuId) {
         SkuInfo skuInfo = new SkuInfo();
         skuInfo.setId(skuId);
         skuInfo.setIsSale(1);
         skuInfoMapper.updateById(skuInfo);
+
+        rabbitService.sendMessage(MqConst.EXCHANGE_DIRECT_GOODS,
+                                MqConst.ROUTING_GOODS_UPPER,skuId);
+
     }
     @Autowired
     RedisTemplate redisTemplate;

@@ -10,4 +10,8 @@ public interface OrderInfoService {
     boolean hasStock(Long skuId,Integer skuNum);
 
     Long submitOrder(OrderInfo orderInfo);
+
+    void cancelOrder(Long orderId);
+
+    OrderInfo getOrderInfo(Long orderId);
 }

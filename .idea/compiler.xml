@@ -11,10 +11,11 @@
         <module name="ware-manage" />
         <module name="common-util" />
         <module name="service-order" />
-        <module name="service-user-client" />
+        <module name="server-gateway" />
         <module name="service-util" />
         <module name="service-user" />
         <module name="service-cart-client" />
+        <module name="service-payment" />
         <module name="web-all" />
         <module name="service-order-client" />
         <module name="service-item" />
@@ -25,7 +26,7 @@
         <module name="service-product-client" />
         <module name="service-mq" />
         <module name="service-list" />
-        <module name="server-gateway" />
+        <module name="service-user-client" />
         <module name="rabbit-util" />
       </profile>
     </annotationProcessing>
@@ -47,6 +48,7 @@
       <module name="service-mq" target="1.8" />
       <module name="service-order" target="1.8" />
       <module name="service-order-client" target="1.8" />
+      <module name="service-payment" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-product-client" target="1.8" />
       <module name="service-user" target="1.8" />
@@ -74,6 +76,7 @@
       <module name="service-mq" options="-parameters" />
       <module name="service-order" options="-parameters" />
       <module name="service-order-client" options="-parameters" />
+      <module name="service-payment" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />
       <module name="service-user" options="-parameters" />

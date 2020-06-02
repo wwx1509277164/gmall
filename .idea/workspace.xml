@@ -2,13 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3efd90-fece-41df-acd8-39d92e1edf40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/src/main/java/com/atguigu/gmall/common/constants/MqConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/target/classes/com/atguigu/gmall/common/constants/MqConst.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/java/com/atguigu/gmall/list/listener/ListListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/com/atguigu/gmall/list/listener/ListListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/config/DeadLetterMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/config/DelayedMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/config/DeadLetterMqConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/config/DelayedMqConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/config/OrderCanelMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/config/OrderCanelMqConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-payment/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-payment/service-payment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-payment/src/main/java/com/atguigu/gmall/payment/ServicePaymentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-payment/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/service/service-payment/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-parent/web/web-all/src/main/java/com/atguigu/gmall/all/controller/PaymentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/service-mq.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/service-mq.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/src/main/java/com/atguigu/gmall/common/config/MQProducerAckConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/src/main/java/com/atguigu/gmall/common/config/MQProducerAckConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/src/main/java/com/atguigu/gmall/common/service/RabbitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/src/main/java/com/atguigu/gmall/common/service/RabbitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/target/classes/com/atguigu/gmall/common/config/MQProducerAckConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/target/classes/com/atguigu/gmall/common/config/MQProducerAckConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/target/classes/com/atguigu/gmall/common/service/RabbitService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/common/rabbit-util/target/classes/com/atguigu/gmall/common/service/RabbitService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/server-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-order-client/src/main/java/com/atguigu/gmall/order/client/OrderFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-order-client/src/main/java/com/atguigu/gmall/order/client/OrderFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service-client/service-order-client/target/classes/com/atguigu/gmall/order/client/OrderFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service-client/service-order-client/target/classes/com/atguigu/gmall/order/client/OrderFeignClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/service-list.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/service-list.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-list/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/receiver/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/src/main/java/com/atguigu/gmall/mq/receiver/MessageReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/receiver/MessageReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-mq/target/classes/com/atguigu/gmall/mq/receiver/MessageReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/service-order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/service-order.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/controller/OrderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/controller/OrderApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/controller/OrderApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/controller/OrderApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/service-product.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/ManagerServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +116,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.atguigu.gmall.payment.service" />
+      <recent name="com.atguigu.gmall.payment.mapper" />
       <recent name="com.atguigu.gmall.order.mapper" />
       <recent name="com.atguigu.gmall.order.service" />
       <recent name="com.atguigu.gmall.user.mapper" />
-      <recent name="com.atguigu.gmall.cart.mapper" />
-      <recent name="com.atguigu.gmall.cart.service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.atguigu.gmall.product.mapper" />
@@ -161,6 +209,13 @@
     <configuration name="ServiceOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="service-order" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.order.ServiceOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-payment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.payment.ServicePaymentApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -399,34 +454,19 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WebAllApplication" />
+        <item itemvalue="Spring Boot.ServerGatewayApplication" />
         <item itemvalue="Spring Boot.ServiceUserApplication" />
         <item itemvalue="Spring Boot.ServiceProductApplication" />
         <item itemvalue="Spring Boot.ServiceListApplication" />
-        <item itemvalue="Spring Boot.ServerGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.20954512" />
+        <option name="contentProportion" value="0.19740437" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15994cbb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a3c776e6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7943c4a7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -469,6 +509,9 @@
       <workItem from="1590626653191" duration="9398000" />
       <workItem from="1590712655760" duration="6589000" />
       <workItem from="1590748580480" duration="6957000" />
+      <workItem from="1590798545485" duration="5349000" />
+      <workItem from="1590886230607" duration="35778000" />
+      <workItem from="1591055125045" duration="2573000" />
     </task>
     <task id="LOCAL-00001" summary="项目之初创建的忽略文件">
       <created>1589271307489</created>
@@ -610,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590732164528</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="消息队列的测试">
+      <created>1590798592771</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590798592771</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +695,8 @@
     <MESSAGE value="订单详情页面的查询" />
     <MESSAGE value="提交订单" />
     <MESSAGE value="ribbit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ribbit" />
+    <MESSAGE value="消息队列的测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="消息队列的测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

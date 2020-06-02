@@ -1,6 +1,8 @@
 package com.atguigu.gmall.order.service.impl;
 
 import com.atguigu.gmall.common.constant.RedisConst;
+import com.atguigu.gmall.common.constants.MqConst;
+import com.atguigu.gmall.common.service.RabbitService;
 import com.atguigu.gmall.common.util.HttpClientUtil;
 import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.enums.OrderStatus;
@@ -35,7 +37,8 @@ public class OrderInfoServiceImpl implements OrderInfoService {
         String result = HttpClientUtil.doGet(wareUrl + "/hasStock?skuId=" + skuId + "&num=" + skuNum);
         return "1".equals(result);
     }
-
+    @Autowired
+    private RabbitService rabbitService;
     @Autowired
     OrderInfoMapper orderInfoMapper;
     @Autowired
@@ -69,15 +72,36 @@ public class OrderInfoServiceImpl implements OrderInfoService {
             orderDetailMapper.insert(orderDetail);
 
             //删除购物车里的信息
-            cartInfoMapper.delete(new QueryWrapper<CartInfo>().eq("user_id",orderInfo.getUserId()
-            ).eq("sku_id",orderDetail.getSkuId()));
+            //cartInfoMapper.delete(new QueryWrapper<CartInfo>().eq("user_id",orderInfo.getUserId()
+            //).eq("sku_id",orderDetail.getSkuId()));
             //删除缓存中的数据
-            redisTemplate.opsForHash().delete(cacheKey,orderDetail.getSkuId().toString());
+            //redisTemplate.opsForHash().delete(cacheKey,orderDetail.getSkuId().toString());
         }
-
+        //发送延迟消息  为了用户不买单的时候 2个小时 就取消此订单
+        /*rabbitService.sendDelayedMessage(MqConst.EXCHANGE_DIRECT_ORDER_CANCEL,
+                MqConst.ROUTING_ORDER_CANCEL,orderInfo.getId(),MqConst.DELAY_TIME*1000);*/
         return orderInfo.getId();
     }
     private String cacheKey(String userId){
+
         return RedisConst.USER_KEY_PREFIX+userId+RedisConst.USER_CART_KEY_SUFFIX;
+    }
+
+    @Override
+    public void cancelOrder(Long orderId) {
+        OrderInfo orderInfo = orderInfoMapper.selectById(orderId);
+        if (OrderStatus.UNPAID.name().equals(orderInfo.getOrderStatus())){
+            orderInfo.setOrderStatus(OrderStatus.CLOSED.name());
+            orderInfo.setProcessStatus(ProcessStatus.CLOSED.name());
+            orderInfoMapper.updateById(orderInfo);
+        }
+    }
+
+    @Override
+    public OrderInfo getOrderInfo(Long orderId) {
+        OrderInfo orderInfo = orderInfoMapper.selectById(orderId);
+        List<OrderDetail> orderDetailList = orderDetailMapper.selectList(new QueryWrapper<OrderDetail>().eq("order_id", orderId));
+        orderInfo.setOrderDetailList(orderDetailList);
+        return orderInfo;
     }
 }
