@@ -2,6 +2,8 @@ package com.atguigu.gmall.payment.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPObject;
+import com.atguigu.gmall.common.constants.MqConst;
+import com.atguigu.gmall.common.service.RabbitService;
 import com.atguigu.gmall.model.enums.PaymentStatus;
 import com.atguigu.gmall.model.enums.PaymentType;
 import com.atguigu.gmall.model.order.OrderInfo;
@@ -26,6 +28,8 @@ public class PaymentInfoServiceImpl implements PaymentInfoService {
     PaymentInfoMapper paymentInfoMapper;
     @Autowired
     OrderInfoMapper orderInfoMapper;
+    @Autowired
+    private RabbitService rabbitService;
     @Override
     public PaymentInfo savaPaymentInfo(Long orderId, PaymentType type) {
         //判断支付信息表是否已经保存过了  防止二次提交
@@ -57,7 +61,21 @@ public class PaymentInfoServiceImpl implements PaymentInfoService {
             paymentInfo.setCallbackTime(new Date());
             paymentInfo.setCallbackContent(JSONObject.toJSONString(paramsMap));
             paymentInfoMapper.updateById(paymentInfo);
+
+
+            //发送消息队列
+            rabbitService.sendMessage(MqConst.EXCHANGE_DIRECT_PAYMENT_PAY,MqConst.ROUTING_PAYMENT_PAY,paymentInfo.getOrderId());
         }
     }
 
+    @Override
+    public void paySuccess(String out_trade_no, String name, Map<String, String> resultMap) {
+
+    }
+
+    @Override
+    public PaymentInfo getPaymentInfo(Long orderId, String name) {
+        PaymentInfo paymentInfo = paymentInfoMapper.selectOne(new QueryWrapper<PaymentInfo>().eq("order_id", orderId));
+        return paymentInfo;
+    }
 }

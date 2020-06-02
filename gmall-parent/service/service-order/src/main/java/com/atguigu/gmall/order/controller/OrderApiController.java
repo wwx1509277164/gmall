@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 /**
  * @author Administrator
@@ -74,5 +76,20 @@ public class OrderApiController {
     public OrderInfo getOrderInfo(@PathVariable("orderId") Long orderId){
 
         return orderInfoService.getOrderInfo(orderId);
+    }
+
+    //由库存微服务发出来的请求   进行拆单操作
+    @PostMapping("/orderSplit")
+    public List<Map<String,Object>> orderSplit(String orderId, String wareSkuMap){
+
+        //进行订单的拆分
+        List<OrderInfo> orderInfoList = orderInfoService.orderSplit(orderId,wareSkuMap);
+        //写返回值
+
+        List<Map<String, Object>> listMap = orderInfoList.stream().map(orderInfo -> {
+            Map<String, Object> map = orderInfoService.initWareOrder(orderInfo);
+            return map;
+        }).collect(Collectors.toList());
+        return listMap;
     }
 }

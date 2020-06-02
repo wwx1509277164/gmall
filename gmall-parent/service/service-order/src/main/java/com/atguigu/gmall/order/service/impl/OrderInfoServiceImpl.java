@@ -1,5 +1,6 @@
 package com.atguigu.gmall.order.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.common.constants.MqConst;
 import com.atguigu.gmall.common.service.RabbitService;
@@ -14,15 +15,18 @@ import com.atguigu.gmall.order.mapper.OrderDetailMapper;
 import com.atguigu.gmall.order.mapper.OrderInfoMapper;
 import com.atguigu.gmall.order.service.OrderInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.apache.http.annotation.Obsolete;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author Administrator
@@ -103,5 +107,111 @@ public class OrderInfoServiceImpl implements OrderInfoService {
         List<OrderDetail> orderDetailList = orderDetailMapper.selectList(new QueryWrapper<OrderDetail>().eq("order_id", orderId));
         orderInfo.setOrderDetailList(orderDetailList);
         return orderInfo;
+    }
+
+
+    //更新进度和订单的的状态
+    @Override
+    public void updateOrderStatus(Long orderId, OrderStatus finished, ProcessStatus paid) {
+        OrderInfo orderInfo = this.getOrderInfo(orderId);
+        orderInfo.setOrderStatus(finished.name());
+        orderInfo.setProcessStatus(paid.name());
+        orderInfoMapper.updateById(orderInfo);
+    }
+    //更新进度状态
+    @Override
+    public void updateOrderStatus(Long orderId, ProcessStatus paid) {
+        OrderInfo orderInfo = this.getOrderInfo(orderId);
+        orderInfo.setProcessStatus(paid.name());
+        orderInfoMapper.updateById(orderInfo);
+    }
+    //通知库存进行扣减库存
+    @Override
+    public void sendOrderStatus(Long orderId) {
+        this.updateOrderStatus(orderId,ProcessStatus.NOTIFIED_WARE);
+        String result = initWareOrder(orderId);
+        rabbitService.sendMessage(MqConst.EXCHANGE_DIRECT_WARE_STOCK,
+                MqConst.ROUTING_WARE_STOCK,result);
+    }
+
+    @Override
+    public String initWareOrder(Long orderId) {
+        OrderInfo orderInfo = this.getOrderInfo(orderId);
+        Map<String, Object> result = initWareOrder(orderInfo);
+        return JSONObject.toJSONString(result);
+    }
+
+    @Override
+    public Map<String, Object> initWareOrder(OrderInfo orderInfo) {
+        Map<String, Object> result =new HashMap<>();
+
+        result.put("orderId",orderInfo.getId());
+        result.put("consignee",orderInfo.getConsignee());
+        result.put("consigneeTel",orderInfo.getConsigneeTel());
+        result.put("orderComment",orderInfo.getOrderComment());
+        result.put("orderBody",orderInfo.getTradeBody());
+        result.put("deliveryAddress",orderInfo.getDeliveryAddress());
+        result.put("paymentWay","2");
+        result.put("wareId",orderInfo.getWareId());
+        List<OrderDetail> orderDetailList = orderInfo.getOrderDetailList();
+        if (!CollectionUtils.isEmpty(orderDetailList)) {
+            List<Map> listMap = orderDetailList.stream().map(orderDetail -> {
+                Map map = new HashMap();
+                map.put("skuId", orderDetail.getSkuId());
+                map.put("skuNum", orderDetail.getSkuNum());
+                map.put("skuName", orderDetail.getSkuName());
+                return map;
+            }).collect(Collectors.toList());
+            result.put("details",listMap);
+        }
+        return result;
+    }
+
+    //开始进行拆单操作
+    @Override
+    public List<OrderInfo> orderSplit(String orderId, String wareSkuMap) {
+        //原始订单
+        OrderInfo orderInfoOrigin = getOrderInfo(Long.parseLong(orderId));
+        List<Map> wareSkuMapList = JSONObject.parseArray(wareSkuMap, Map.class);
+        List<OrderDetail> orderDetailListOrigin = orderInfoOrigin.getOrderDetailList();
+        List<OrderInfo> orderInfoList = new ArrayList<>();
+        for (Map wareMap : wareSkuMapList) {
+            //设置订单
+            OrderInfo orderInfo = new OrderInfo();
+            BeanUtils.copyProperties(orderInfoOrigin,orderInfo);
+            orderInfo.setId(null);
+            orderInfo.setParentOrderId(orderInfoOrigin.getId());
+            String wareId = (String) wareMap.get("wareId");
+            orderInfo.setWareId(wareId);
+            //设置订单详情页面
+            List<String> skuIds = (List<String>) wareMap.get("skuIds");
+            List<OrderDetail> orderDetails = orderDetailListOrigin.stream().filter(orderDetail -> {
+                for (String skuId : skuIds) {
+                    if (skuId.equals(orderDetail.getSkuId().toString())) {
+                        return true;
+                    }
+                }
+                return false;
+            }).collect(Collectors.toList());
+
+            orderInfo.setOrderDetailList(orderDetails);
+            //保存订单和订单详情表
+            saveOrderInfo(orderInfo);
+            //追加到集合当中
+            orderInfoList.add(orderInfo);
+        }
+        orderInfoOrigin.setProcessStatus(ProcessStatus.SPLIT.name());
+        this.updateOrderStatus(orderInfoOrigin.getId(),
+                OrderStatus.SPLIT,ProcessStatus.SPLIT);
+        return orderInfoList;
+    }
+
+    private void saveOrderInfo(OrderInfo orderInfo) {
+        orderInfoMapper.insert(orderInfo);
+        List<OrderDetail> orderDetailList = orderInfo.getOrderDetailList();
+        for (OrderDetail orderDetail : orderDetailList) {
+            orderDetail.setOrderId(orderInfo.getId());
+            orderDetailMapper.insert(orderDetail);
+        }
     }
 }

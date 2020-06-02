@@ -13,4 +13,8 @@ public interface PaymentInfoService {
     PaymentInfo savaPaymentInfo(Long orderId, PaymentType type);
 
     void paySuccess(Map<String, String> paramsMap);
+
+    void paySuccess(String out_trade_no, String name, Map<String, String> resultMap);
+
+    PaymentInfo getPaymentInfo(Long orderId, String name);
 }

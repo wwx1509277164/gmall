@@ -53,7 +53,7 @@ public class WeixinServiceImpl implements WeixinService {
             m.put("nonce_str", WXPayUtil.generateNonceStr());
             m.put("body", orderInfo.getTradeBody());
             m.put("out_trade_no", orderInfo.getOutTradeNo());
-            m.put("total_fee", orderInfo.getTotalAmount().multiply(new BigDecimal("100")).longValue()+"");
+            m.put("total_fee", "100");
             m.put("spbill_create_ip", "127.0.0.1");
             m.put("notify_url", notifyurl);
             m.put("trade_type", "NATIVE");
@@ -81,6 +81,36 @@ public class WeixinServiceImpl implements WeixinService {
             e.printStackTrace();
             return new HashMap<>();
         }
+
+    }
+    //微信支付成功回掉函数
+    @Override
+    public Map<String, String> queryPayStatus(Long orderId, String name) {
+        try {
+            PaymentInfo paymentInfoQuery = paymentInfoService.getPaymentInfo(orderId, PaymentType.WEIXIN.name());
+
+            //1、封装参数
+            Map m = new HashMap<>();
+            m.put("appid", appid);
+            m.put("mch_id", partner);
+            m.put("out_trade_no", paymentInfoQuery.getOutTradeNo());
+            m.put("nonce_str", WXPayUtil.generateNonceStr());
+
+            //2、设置请求
+            HttpClient client = new HttpClient("https://api.mch.weixin.qq.com/pay/orderquery");
+            client.setXmlParam(WXPayUtil.generateSignedXml(m, partnerkey));
+            client.setHttps(true);
+            client.post();
+            //3、返回第三方的数据
+            String xml = client.getContent();
+            Map<String, String> resultMap = WXPayUtil.xmlToMap(xml);
+            //6、转成Map
+            //7、返回
+            return resultMap;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
 
     }
 }
